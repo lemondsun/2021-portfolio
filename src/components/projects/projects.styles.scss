@@ -1,0 +1,32 @@
+.projects-section {
+  margin-top: 10px;
+  background-color: white;
+  padding-bottom: 10px;
+
+  .projects-header {
+    margin-left: 10px;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .project-container {
+    padding: 10px;
+
+    .project-info-container {
+
+      .project-image {
+      
+        background-image: url(https://i.imgur.com/vndsQuF.jpg);
+        width: 70%;
+        margin-left: 15%;
+        height: 40vh;
+        background-size: cover;
+        background-color: rgba(189, 177, 177, 0.411); /* Tint color */
+        background-blend-mode: screen;
+      }
+    }
+   
+  }
+}
