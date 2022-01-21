@@ -1,22 +1,79 @@
+$small: 375px;
+$medium: 414px;
+
 .about-section {
-  margin-top: 10px;
-  background-color: white;
-  padding-bottom: 10px;
-
-  .about-header {
-    margin-left: 10px;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-family: "Righteous", cursive;
-    font-size: 25px;
-    font-weight: 400;
+  padding-top: 300px;
+  height: 600px;
+  
+  @media screen and (max-width: $small) {  
+    padding-top: 10px;
+    height: 490px;
+  }
+  @media screen and (max-width: $medium) {  
+    padding-top: 250px;
+    height: 590px;
   }
 
-  .about-text {
-    font-family: "Ubuntu", sans-serif;
-    padding: 10px;
-  }
+  .bio {
+    width: 60vw;
+    margin: 0 20vw 50px 20vw;
+    padding-bottom: 10px;
+    background: white;
 
+    @media screen and (max-width: $small) {  
+      width: 80vw;
+      margin: 0 10vw 525px 10vw;
+    }
+    @media screen and (max-width: $medium) {  
+      width: 80vw;
+      margin: 0 10vw 525px 10vw;
+    }
+
+    .bio-header {
+      margin-left: 30%;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-family: "Righteous", cursive;
+      font-size: 30px;
+      font-weight: 400;
+      @media screen and (max-width: $small) {  
+        margin: auto;
+        text-align: center;
+      }
+      @media screen and (max-width: $medium) {  
+        margin: auto;
+        text-align: center;
+      }
+    }
+    .about-text {
+      font-family: "Ubuntu", sans-serif;
+    }
+  }
   .tech-stack {
-    margin: 10px;
+    height: 200px;
+    width: 60vw;
+    background-color: white;
+    font-family: "Ubuntu", sans-serif;
+    margin-top: 100px;
+
+    @media screen and (max-width: $small) {  
+      height: 300px;
+      width: 80vw;
+      margin: 0 10vw 0 10vw;
+    }
+    @media screen and (max-width: $medium) {  
+      height: 300px;
+      width: 80vw;
+      margin: 0 10vw 0 10vw;
+    }
+
+    .tech-stack-header {
+      font-family: "Open Sans Condensed", sans-serif;
+      font-family: "Righteous", cursive;
+      font-size: 30px;
+      font-weight: 400;
+      text-align: center;
+    }
+
   }
+ 
 }

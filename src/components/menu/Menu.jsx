@@ -10,7 +10,7 @@ export default function Menu() {
 
   return (
     <div className='menu' >
-      <a className='title' href='#hero-section'>
+      <a className={`${color} title`} href='#hero-section'>
         <span className={`${color}`}>JM</span>
       </a>
     </div>

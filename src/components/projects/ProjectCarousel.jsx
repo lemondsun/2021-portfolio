@@ -1,53 +1,68 @@
-import React, {useState} from 'react';
-import projectData from './projects-data';
+import React, { useState } from 'react';
+
 import Carousel from 'react-bootstrap/Carousel';
+import ProjectModal from '../modal/ProjectModal';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { updateColor } from '../../redux/colorSlice';
+
 import './projects.styles.scss';
 
 export default function ProjectCarousel() {
-  const [count, setCount] = useState(1);
-  const color = useSelector((state) => state.color.color);
+  const [modalShow, setModalShow] = useState(false);
+  const [index, setIndex] = useState(0);
+  const projects = useSelector((state) => state.project.projects);
   const dispatch = useDispatch();
 
   const colorTable = {
-    1: 'black',
-    2: 'blue',
-    3: 'red'
+    0: 'black',
+    1: 'blue',
+    2: 'red'
   };
   
-  const slideEvent = (count) => {
-    const countCounter = (count) => {
-      if (count === 3) setCount(1)
-      if (count < 3) setCount(count += 1)
-    };
-    countCounter(count)
-    dispatch(updateColor(colorTable[count]));
-
-    console.log(count)
+  const handelSelect = (selectedIndex,e) => {
+    setIndex(selectedIndex);
+    dispatch(updateColor(colorTable[index]));
   };
 
-
-  const projectSection = projectData.map((project) => (
-    <Carousel.Item key={`${project.id}`}>
+  const projectSection = projects.map((project) => (
+    <Carousel.Item
+      className='project-section'
+      key={`${project.id}`}
+    >
       <img
-        className='project-image d-block w-100' src={`${project.image}`}
+        className='project-image' src={`${project.image}`}
         alt="Project slide"
       />
       <Carousel.Caption>
         <h3>{`${project.name}`}</h3>
-        <p className='project-link'>Visit website</p>
-        <p className='github-link'>Visit github </p>
+        <p className='project-link'
+          variant="primary"
+          onClick={() => setModalShow(true)}
+        >click here for more information
+        
+        </p>
       </Carousel.Caption>
     </Carousel.Item>
   )
   );
 
   return (
-    <Carousel
-      onSlide={() => slideEvent(count) } >
-{projectSection}
-</Carousel>
+    <div className='project-section'>
+    <h1 className='header'>MY PROJECTS</h1>
+      <Carousel
+      interval={null}
+        activeIndex={index}
+        onSelect={handelSelect}
+      >
+        {projectSection}
+      </Carousel>
+      <ProjectModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        projectId={index}
+      />
+    </div>
+  
   )
 };

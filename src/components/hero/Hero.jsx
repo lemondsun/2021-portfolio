@@ -1,16 +1,24 @@
 import React from 'react'
 
+import {Row, Col, Container } from 'react-bootstrap'
+
 import './hero.styles.scss'
 
 export default function Hero() {
   return (
-    <div className='hero-section'>
-      <div className='background-image' />
-      <div className='content'>
-        <h1 className='title'>Jason<br />Mullings</h1>
+    <Container
+      fluid
+      className='hero-section'
+    >
+      <Row>
+        <Col>
+      <img className='background-image' src='https://i.imgur.com/vndsQuF.jpg' alt='the programmer in profile'/>
+      </Col>
+      <Col className='content'>
+        <h1 className='title'>Jason Mullings</h1>
         <h2 className='subtitle'>Full Stack Developer</h2>
-      </div>
-     
-    </div>
+      </Col>
+      </Row>
+    </Container>
   )
 };
