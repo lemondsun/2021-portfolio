@@ -27,12 +27,16 @@ $min_font: 16px;
 $max_font: 24px;
 $small: 375px;
 $medium: 415px;
+$large: 768px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 .App {
-background-color: blueviolet;
+  background-image: url('../src/assets/cityBackground.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250vh;
 
 @media screen and (max-width: $small) {   
   background-color: white;
@@ -42,4 +46,18 @@ background-color: blueviolet;
   background-color: white;
 }
 
+@media screen and (max-width: $large) {
+  background-color: white;
+}
+
+@media screen and (max-width: 752px){
+  height: 300vh;
+}
+
+@media only screen 
+and (device-width: 390px) 
+and (device-height: 844px) 
+and (-webkit-device-pixel-ratio: 3) {
+  height: 2100px;
+}
 }

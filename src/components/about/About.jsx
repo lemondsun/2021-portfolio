@@ -7,24 +7,12 @@ import Col from 'react-bootstrap/Col';
 import './about.styles.scss';
 
 
-export default function About() {
-  const [offsetY, setoffsetY] = useState(0);
-  const handleScroll = () => setoffsetY(window.pageYOffset);
-
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-
-
+export default function About(props) {
   return (
     <div
       className='about-section' style={
         {
-          transform: `translateY(-${offsetY * 0.5}px)`
+          transform: `translateY(-${props.parallax * 0.5}px)`
         }
       }>
       <Container className='bio' fluid>
@@ -34,14 +22,9 @@ export default function About() {
         </p>
   </Container>
       <Container className='tech-stack'
-        style={
-        {
-          transform: `translateY(-${offsetY * 0.6}px)`
-        }
-      }
-        
         fluid>
-      <p className='tech-stack-header'>Tech Stack</p>
+        <p className='tech-stack-header'>Tech Stack</p>
+        <div className='tech-section'>
         <Row>
           <Col className='about-text'>React JS</Col>
           <Col className='about-text' >React Native</Col>
@@ -62,6 +45,7 @@ export default function About() {
         <Col className='about-text' >API's</Col>
         <Col className='about-text' >Jest & Enzyme</Col>
         </Row>
+        </div>
       </Container>
       </div>
   );

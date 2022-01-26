@@ -1,20 +1,30 @@
 .custom-button {
+  margin-left: 325px;
   min-width: 165px;
-  width: auto;
-  height: 50px;
+  width: 350px;
+  height: auto;
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
-  color: white;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed';
   font-weight: bolder;
   border: none;
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  color: white;
+  text-align: center;
+
+
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
 
   &:hover {
     background-color: white;

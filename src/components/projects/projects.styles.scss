@@ -1,22 +1,56 @@
 $small: 375px;
 $medium: 414px;
+$large: 768px;
 
 
 .project-section {
-  background-color: white;
   height: 700px;
   font-family: "Righteous", cursive;
 
   @media screen and (max-width: $small) { 
-      height: 300px;
+  height: 300px;
   }
   @media screen and (max-width: $medium) {  
   height: 300px;
   }
-  .header {
-    margin-left: 40%;
+  @media screen and (max-width: $large) {  
+    height: 550px;
+  }
+  @media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    height: 300px;
+  }
+  
+  .modal-button{
+    width: auto;
+    height: 200px;
+    margin-left: 0%;
 
-    @media screen and (max-width: $small) { 
+    @media screen and (max-width: 752px){
+      margin-bottom: 20px;
+    }
+
+    @media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {
+
+color: black;
+text-emphasis: none;
+margin-bottom: 2px;
+ }
+
+
+  }
+  .header {
+    width: 40%;
+    margin-left: 30%;
+    background-color: white;
+    text-align: center;
+
+  @media screen and (max-width: $small) { 
       margin-left: 0;
       text-align: center;
   }
@@ -24,11 +58,27 @@ $medium: 414px;
     margin-left: 0;
     text-align: center;
   }
+  @media screen and (max-width: $large) {  
+    margin-left: 0;
+    text-align: center;
+  }
+  @media screen and (max-width: 752px){
+    margin-left: 30vw;
+    background-color: white;
+    text-align: center;
+  }
+  @media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    margin-left: 12%;
+    text-align: center;
+    width: 290px;
+  }
   }
 
   .carousel.slide {
     margin-top: 10px;
-    background-color: white;
     padding-bottom: 10px;
     width: 100vw;
     height: 666px;
@@ -39,7 +89,15 @@ $medium: 414px;
     @media screen and (max-width: $medium) {  
       height: 300px;
     }
-
+    @media screen and (max-width: $large) {  
+      height: 550px;
+    }
+    @media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {
+      height: 300px;
+    }
   }
 
   img {
@@ -58,6 +116,19 @@ $medium: 414px;
       height: 300px;
       width: 90%;
     }
+    @media screen and (max-width: $large) {  
+      margin-left: 10%;
+        height: 500px;
+        width: 80%;
+      }
+      @media only screen 
+      and (device-width: 390px) 
+      and (device-height: 844px) 
+      and (-webkit-device-pixel-ratio: 3) {
+        height: 275px;
+        width: 80%;
+        margin-left: 5%;
+      }
 
   }
 
@@ -66,6 +137,7 @@ $medium: 414px;
     font-family: "Righteous", cursive;
     font-size: 25px;
     font-weight: 400;
+    background-color: white;
     @media screen and (max-width: $small) { 
       font-size: 20px;
       margin-left: 25px;
@@ -85,6 +157,9 @@ $medium: 414px;
     font-family: "Righteous", cursive;
     font-size: 25px;
     font-weight: 400;
+    background-color: white;
+
+  
     @media screen and (max-width: $small) { 
       font-size: 20px;
       margin-right: 25px;
@@ -100,12 +175,19 @@ $medium: 414px;
   }
 
   @media screen and (max-width: $medium) {  
-
-  .carousel-caption {
-    background-color: rgba(53, 47, 47, 0.3);
-    left: 20%;
-    width: 60vw;
-  }
+    .carousel-caption {
+      background-color: rgba(255, 255, 255, 0.479);
+      left: 20%;
+      width: 60vw;
+      height: 100px;
+      color: black;
+      
+  
+      .modal-button-headline{
+        font-size: 20px;
+      }
+     
+    }
 }
 }
 

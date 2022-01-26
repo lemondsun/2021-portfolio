@@ -1,10 +1,9 @@
 .menu {
-  background-color: rgba(231, 233, 235, 0.219);
   text-align: center;
   position: fixed;
   width: 100vw;
   z-index: 1000;
- padding-top: 0.5vh;
+  
   height: 7vh;
   font-size: 2rem;
 
@@ -18,13 +17,22 @@
     color: red;
   }
   .title {
-    height: 100px;
-    width: 100px;
+    margin-right: 20px;
+    height: 80px;
+    width: 80px;
     font-family: "Righteous", cursive;
     text-decoration: none;
     text-emphasis: none;
     border-radius: 50%;
     border: 2px solid ;
+
+    @media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {
+      height: 50px;
+      width: 50px;
+    }
 
     .black {
       color: black;
@@ -35,6 +43,11 @@
     .red {
       color: red;
     }
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
   }
 }
 

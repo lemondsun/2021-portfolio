@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 
 import { useSelector } from 'react-redux';
 
+import '../../components/modal/ProjectModal.styles.scss'
 
 export default function ProjectModal(props) {
 
@@ -28,15 +29,22 @@ export default function ProjectModal(props) {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button>
-          <a target="_blank" rel="noopener noreferrer" href={projects[props.projectId].github}>Visit GitHub
-          </a>
+      <a target="_blank" rel="noopener noreferrer" href={projects[props.projectId].github}>
+          <Button
+          className='info-button'
+          >
+Visit GitHub
         </Button>
-        <Button>
-          <a target="_blank" rel="noopener noreferrer" href={projects[props.projectId].website}>
+        </a>
+        <a  target="_blank" rel="noopener noreferrer" href={projects[props.projectId].website}>
+          <Button
+          className='info-button'
+          >
+
           Visit site
-          </a>
+         
         </Button>
+        </a>
       </Modal.Footer>
     </Modal>
   );

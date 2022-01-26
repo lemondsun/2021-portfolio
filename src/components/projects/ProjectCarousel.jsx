@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
 import ProjectModal from '../modal/ProjectModal';
+import Button from '../button/Button';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { updateColor } from '../../redux/colorSlice';
 
 import './projects.styles.scss';
 
-export default function ProjectCarousel() {
+export default function ProjectCarousel(props) {
   const [modalShow, setModalShow] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const projects = useSelector((state) => state.project.projects);
   const dispatch = useDispatch();
 
@@ -34,23 +35,31 @@ export default function ProjectCarousel() {
         className='project-image' src={`${project.image}`}
         alt="Project slide"
       />
-      <Carousel.Caption>
-        <h3>{`${project.name}`}</h3>
-        <p className='project-link'
-          variant="primary"
-          onClick={() => setModalShow(true)}
-        >click here for more information
-        
+      <Carousel.Caption
+      onClick={() => setModalShow(true)}
+      className='modal-button'
+      >
+        <h3 className='modal-button-headline'>{`${project.name}`}</h3>
+        <p className='project-link'>
+            click here for info
         </p>
+      
       </Carousel.Caption>
     </Carousel.Item>
   )
   );
 
   return (
-    <div className='project-section'>
+    <div className='project-section'
+    style={
+      {
+        transform: `translateY(-${props.parallax * .1}px)`
+      }
+    }
+    >
     <h1 className='header'>MY PROJECTS</h1>
       <Carousel
+      indicators={false}
       interval={null}
         activeIndex={index}
         onSelect={handelSelect}
