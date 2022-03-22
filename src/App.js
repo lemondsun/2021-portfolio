@@ -1,4 +1,8 @@
-import { useState,useEffect } from 'react';
+import { useEffect } from 'react';
+
+
+import {useSelector, useDispatch } from 'react-redux';
+import { setoffsetY } from './redux/screenSlice';
 
 import Menu from './components/menu/Menu';
 import Hero from './components/hero/Hero';
@@ -9,21 +13,23 @@ import Footer from './components/footer/Footer';
 import './App.styles.scss'
 
 function App() {
-  const [offsetY, setoffsetY] = useState(0);
-  const handleScroll = () => setoffsetY(window.pageYOffset);
-
-
+  const dispatch = useDispatch()
+  const screenPlacement = useSelector((state)=>state)
+  //this function will use the redux reducer to save the Y axis to redux
+  const handleScroll = () => dispatch(setoffsetY(window.pageYOffset));
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    console.log(screenPlacement.offsetY.offsetY,'here')
+    return () => window.removeEventListener('scroll', handleScroll);
     
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  });
   return (
     <div className="App">
       <Menu />
       <Hero />
-      <About parallax={offsetY }/>
-      <ProjectCarousel parallax={offsetY }/>
+      <About />
+      <ProjectCarousel />
      {/*<Footer />*/}
     </div>
   );

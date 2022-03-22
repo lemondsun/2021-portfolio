@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+
+import { useSelector } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,11 +10,12 @@ import './about.styles.scss';
 
 
 export default function About(props) {
+  const screenPlacement = useSelector((state)=>state.offsetY.offsetY)
   return (
     <div
       className='about-section' style={
         {
-          transform: `translateY(-${props.parallax * 0.5}px)`
+          transform: `translateY(-${screenPlacement * 0.5}px)`
         }
       }>
       <Container className='bio' fluid>

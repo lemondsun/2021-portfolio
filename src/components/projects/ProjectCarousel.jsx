@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 
 import Carousel from 'react-bootstrap/Carousel';
 import ProjectModal from '../modal/ProjectModal';
-import Button from '../button/Button';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { updateColor } from '../../redux/colorSlice';
 
 import './projects.styles.scss';
 
-export default function ProjectCarousel(props) {
+export default function ProjectCarousel() {
   const [modalShow, setModalShow] = useState(false);
   const [index, setIndex] = useState(1);
   const projects = useSelector((state) => state.project.projects);
+  const screenPlacement = useSelector((state)=>state.offsetY.offsetY)
   const dispatch = useDispatch();
 
   const colorTable = {
@@ -26,9 +26,9 @@ export default function ProjectCarousel(props) {
     dispatch(updateColor(colorTable[index]));
   };
 
-  const projectSection = projects.map((project) => (
+  const projectItems = projects.map((project) => (
     <Carousel.Item
-      className='project-section'
+      className='project-item'
       key={`${project.id}`}
     >
       <img
@@ -46,17 +46,15 @@ export default function ProjectCarousel(props) {
       
       </Carousel.Caption>
     </Carousel.Item>
-  )
-  );
+  ));
 
   return (
     <div className='project-section'
     style={
       {
-        transform: `translateY(-${props.parallax * .1}px)`
+        transform: `translateY(-${screenPlacement * .1}px)`
       }
-    }
-    >
+    }>
     <h1 className='header'>MY PROJECTS</h1>
       <Carousel
       indicators={false}
@@ -64,7 +62,7 @@ export default function ProjectCarousel(props) {
         activeIndex={index}
         onSelect={handelSelect}
       >
-        {projectSection}
+        {projectItems}
       </Carousel>
       <ProjectModal
         show={modalShow}
