@@ -1,0 +1,62 @@
+$small: 375px;
+$medium: 414px;
+$large: 768px;
+
+// .instagram-post-section {
+// width: 100vw;
+// height: 50vh;
+// margin-left: 4%;
+
+//   .instagram-image-box {
+
+    
+//   .instagram-image {
+//     width: 100px;
+//     height: 100px;
+//     object-fit: fill;
+//   }
+//   }
+// }
+.instagram-section{
+  width: 90vw;
+  padding: 10px 10px 10px 10px;
+  border: 2px solid white;
+  margin-left: 5vw;
+  margin-right: 0vw;
+
+  .header {
+    font-family: "Righteous", cursive;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    background-color: white;
+
+    @media screen and (max-width: $small) {
+      margin-left: 0;
+      text-align: center;
+    }
+    @media screen and (max-width: $medium) {
+      margin-left: 0;
+      text-align: center;
+    }
+    @media screen and (max-width: $large) {
+      margin-left: 0;
+      text-align: center;
+    }
+    @media screen and (max-width: 752px) {
+      margin-left: 30vw;
+      background-color: white;
+      text-align: center;
+    }
+    @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+      text-align: center;
+      width: 90%;
+      margin-bottom: 25px;
+      margin-left: 5%;
+      font-size: 35px;
+    }
+  }
+}
+.MuiImageList-root{
+  height:335px;
+}

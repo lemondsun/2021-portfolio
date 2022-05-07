@@ -30,6 +30,8 @@ $large: 768px;
     margin: 15vh 0 0 15vw;
     width: 300px;
     height: 300px;
+    padding: 20px;
+    border: 2px solid white;
     border-radius:50%;
 
     @media screen and (max-width: $small) {     

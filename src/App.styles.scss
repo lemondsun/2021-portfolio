@@ -31,13 +31,28 @@ $large: 768px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 250vh;
 }
+
 .App {
   background-image: url('../src/assets/cityBackground.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 250vh;
+  margin: 0;
+  width: 100vw;
+  position: absolute;
+  
 
+  @media only screen 
+  and (min-width: 800px) 
+  {
+   height: 310vh;
+  }
+
+  
 @media screen and (max-width: $small) {   
   background-color: white;
 }
@@ -58,6 +73,7 @@ html {
 and (device-width: 390px) 
 and (device-height: 844px) 
 and (-webkit-device-pixel-ratio: 3) {
-  height: 2100px;
+  height: 250vh;
 }
+
 }

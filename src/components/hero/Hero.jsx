@@ -12,7 +12,9 @@ export default function Hero() {
     >
       <Row>
         <Col>
-      <img className='background-image' src='https://i.imgur.com/vndsQuF.jpg' alt='the programmer in profile'/>
+          <img
+            className='background-image' src='https://i.imgur.com/vndsQuF.jpg' alt='the programmer in profile'
+          />
       </Col>
       <Col className='content'>
         <h1 className='title'>Jason Mullings</h1>

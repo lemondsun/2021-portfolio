@@ -3,19 +3,9 @@
   position: fixed;
   width: 100vw;
   z-index: 1000;
-  
   height: 7vh;
   font-size: 2rem;
 
-  .black {
-    color: black;
-  }
-  .blue {
-    color: blue;
-  }
-  .red {
-    color: red;
-  }
   .title {
     margin-right: 20px;
     height: 80px;
@@ -32,16 +22,6 @@
     and (-webkit-device-pixel-ratio: 3) {
       height: 50px;
       width: 50px;
-    }
-
-    .black {
-      color: black;
-    }
-    .blue {
-      color: blue;
-    }
-    .red {
-      color: red;
     }
   }
 

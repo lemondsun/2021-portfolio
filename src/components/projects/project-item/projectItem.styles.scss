@@ -1,0 +1,78 @@
+$small: 375px;
+$medium: 414px;
+$large: 768px;
+
+.project {
+  border: .5px solid black;
+  padding: 5px;
+  background-color: rgba(128, 128, 128, 0.568);
+
+  @media only screen 
+  and (min-width: 800px) 
+  {
+    border: 2.5px solid black;
+  }
+}
+
+.project-image {
+  height: 666px;
+  width: 70%;
+  margin-left: 15%;
+
+  @media only screen 
+  and (min-width: 800px) 
+  {
+    width: 90%;
+    margin: 5%;
+  }
+
+  @media screen and (max-width: $small) {
+    margin-left: 0;
+    height: 300px;
+    width: 100%;
+  }
+  @media screen and (max-width: $medium) {
+    margin-left: 0%;
+    padding-left: 10%;
+    height: 300px;
+    width: 90%;
+  }
+  @media screen and (max-width: $large) {
+    margin-left: 10%;
+    height: 500px;
+    width: 80%;
+  }
+  @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    height: 275px;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+
+.modal-button {
+  background-color: white;
+  width: auto;
+  height: 200px;
+  margin-left: 0%;
+  text-align: center;
+
+  @media only screen 
+  and (min-width: 800px) 
+  {
+  width: 90%;
+  height: 100px;
+  margin: 0 5% 5%;
+  }
+
+  @media screen and (max-width: 752px) {
+    margin-bottom: 20px;
+  }
+  @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    color: black;
+    text-emphasis: none;
+    margin: 10px 0px 0px;
+    height: 100px;
+  }
+}

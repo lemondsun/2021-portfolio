@@ -5,6 +5,12 @@ $large: 768px;
 .about-section {
   padding-top: 300px;
   height: 100vh;
+
+  @media only screen 
+  and (min-width: 800px) 
+  {
+    margin-bottom: 50vh;
+  }
   
   @media screen and (max-width: $small) {  
     padding-top: 10px;
@@ -22,8 +28,8 @@ $large: 768px;
   and (device-width: 390px) 
   and (device-height: 844px) 
   and (-webkit-device-pixel-ratio: 3) {
+    padding-top: 50px;
     height: 718px;
-    margin-bottom: 100px;
   }
 
   .bio {
@@ -91,7 +97,7 @@ $large: 768px;
     }
   }
   .tech-stack {
-    height: 35vh;
+    height: 40vh;
     width: 60vw;
     font-family: "Ubuntu", sans-serif;
     margin-top: 100px;
@@ -109,7 +115,7 @@ $large: 768px;
       margin: 0 10vw 0 10vw;
     }
     @media screen and (max-width: $large) {  
-      height: 300px;
+      height: 320px;
       width: 80vw;
       margin: 0 10vw 0 10vw;
     }
@@ -139,7 +145,6 @@ $large: 768px;
     .tech-section {
       background-color: white;
       padding: 15px;
-      
     }
 
     .about-text{
