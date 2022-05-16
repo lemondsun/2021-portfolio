@@ -37,32 +37,30 @@ html {
 }
 
 .App {
-  background-image: url('../src/assets/cityBackground.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250vh;
+  height: 450vh;
   margin: 0;
   width: 100vw;
-  position: absolute;
+  position: relative;
+  background-color: rgb(31, 30, 30);
   
 
   @media only screen 
   and (min-width: 800px) 
   {
-   height: 310vh;
+   height: 270vh;
   }
 
   
 @media screen and (max-width: $small) {   
-  background-color: white;
+  background-color: rgb(31, 30, 30);
 }
 
 @media screen and (max-width: $medium) {
-  background-color: white;
+  background-color: rgb(31, 30, 30);
 }
 
 @media screen and (max-width: $large) {
-  background-color: white;
+  background-color: rgb(31, 30, 30);
 }
 
 @media screen and (max-width: 752px){
@@ -73,7 +71,9 @@ html {
 and (device-width: 390px) 
 and (device-height: 844px) 
 and (-webkit-device-pixel-ratio: 3) {
-  height: 250vh;
+  height: 280vh;
+  background-color: rgb(39, 38, 38);
+
 }
 
 }

@@ -1,10 +1,10 @@
 .menu {
-  text-align: center;
   position: fixed;
   width: 100vw;
   z-index: 1000;
   height: 7vh;
   font-size: 2rem;
+  
 
   .title {
     margin-right: 20px;
@@ -13,15 +13,15 @@
     font-family: "Righteous", cursive;
     text-decoration: none;
     text-emphasis: none;
-    border-radius: 50%;
-    border: 2px solid ;
+   
 
     @media only screen 
     and (device-width: 390px) 
     and (device-height: 844px) 
     and (-webkit-device-pixel-ratio: 3) {
-      height: 50px;
-      width: 50px;
+      height: 60px;
+      width: 60px;
+      text-align: center;
     }
   }
 

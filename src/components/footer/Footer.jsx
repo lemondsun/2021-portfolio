@@ -10,11 +10,6 @@ export default function Footer() {
   return (
     <div
       className='footer-section'
-      style={
-        {
-          transform: `translateY(-${screenPlacement * 0.2}px)`
-        }
-      }
     >
       <p>For more from me visit:</p>
       <div className='social-links'>

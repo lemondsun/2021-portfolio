@@ -1,0 +1,30 @@
+// answerSubmitted === true ?
+          //   (
+          //     userAnswer === triviaQuestion[3] ?
+          //       <Col className='content'>
+          //         <h1 className='title'>Jason Mullings</h1>
+          //         <h2 className='subtitle'>This is one of my favorite movies, whats it's name?</h2>
+          //         <input className='answer-bar' type='text' placeholder='enter your guess here' onChange={event => { setUserAnswer(event.target.value) }} />
+          //       </Col>
+          //       :
+          //       <Col className='content'>
+          //         <h1 className='title'>Jason Mullings</h1>
+          //         <h2 className='subtitle'>This is one of my favorite movies, whats it's name?</h2>
+          //         <input className='answer-bar' type='text' placeholder='enter your guess here' onChange={event => { setUserAnswer(event.target.value) }} />
+          //       </Col>
+          //   )
+          //   :
+          //   (
+          //     appSwitch === true ?
+      
+          //       <Col className='content'>
+          //         <h1 className='title'>Jason Mullings</h1>
+          //         <h2 className='subtitle'>This is one of my favorite movies, whats it's name?</h2>
+          //         <input className='answer-bar' type='text' placeholder='enter your guess here' onChange={event => { setUserAnswer(event.target.value) }} />
+          //       </Col>
+          //       :
+          //       <Col className='content'>
+          //         <h1 className='title'>Jason Mullings</h1>
+          //         <h2 className='subtitle'>Full Stack Developer</h2>
+          //       </Col>
+          //   )

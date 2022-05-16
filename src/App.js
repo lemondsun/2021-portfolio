@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setoffsetY } from './redux/screenSlice';
+import { useSelector } from 'react-redux';
+
 
 import Menu from './components/menu/Menu';
 import Hero from './components/hero/Hero';
@@ -8,34 +10,63 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Footer from './components/footer/Footer';
 import IgPosts from './components/instagram-post/IgPosts';
+import QuestionBox from './components/question-square/QuestionBox';
+import TriviaSwitch from './components/trivia-switch/TriviaSwitch';
 
-import './App.styles.scss'
+import './App.styles.scss';
+
+let triviaKeys = ['first', 'second'];
+let tiviaSelect = triviaKeys[Math.floor(Math.random() * triviaKeys.length)];
 
 function App() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   //this function will use the redux reducer to save the Y axis to redux
   const handleScroll = () => dispatch(setoffsetY(window.pageYOffset));
-  
+  const screenPlacement = useSelector((state) => state.offsetY.offsetY);
+  const triviaQuestion = useSelector((state) => state.triviaQuestions[tiviaSelect]);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-    
   });
   return (
     <div className="App">
-    
       <Menu />
-      <Hero />
+      <Hero
+      triviaQuestion={triviaQuestion}
+      />
       <About />
-      <Projects />
+      <QuestionBox
+        firstQuestion
+    style={
       {
-        // <IgPosts />
+        transform: `translateY(-${screenPlacement * 1}px)`
       }
+    }
+      >{triviaQuestion[0]}</QuestionBox>
+      <Projects />
+      <QuestionBox
+      secondQuestion
+    style={
+      {
+        transform: `translateY(-${screenPlacement * .8}px)`
+      }
+    }
+    >{triviaQuestion[1]}</QuestionBox>
+     
+          <QuestionBox
+          thirdQuestion
+    style={
+      {
+        transform: `translateY(-${screenPlacement * .6}px)`
+      }
+    }
+      >{triviaQuestion[2]}</QuestionBox>
+    <TriviaSwitch/>
       <Footer />
       </div>
-  
-   
   );
 };
+
 
 export default App;

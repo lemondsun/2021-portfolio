@@ -1,0 +1,20 @@
+.trivia-switch-tab {
+  height: 100px;
+  width: 40vw;
+  padding-left: 50px;
+  padding-top: 25px;
+  position: absolute;
+  bottom: 60px;
+  margin-left: 30vw;
+
+  @media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    height: 70px;
+    width: 70vw;
+    margin-left: 15vw;
+    padding-left: 0%;
+    border: none;
+  }
+}

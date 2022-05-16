@@ -5,30 +5,27 @@ $large: 768px;
 .about-section {
   padding-top: 300px;
   height: 100vh;
+  position: absolute;
+  z-index: 3;
 
-  @media only screen 
-  and (min-width: 800px) 
-  {
+  @media only screen and (min-width: 800px) {
     margin-bottom: 50vh;
   }
-  
-  @media screen and (max-width: $small) {  
+
+  @media screen and (max-width: $small) {
     padding-top: 10px;
     height: 490px;
   }
-  @media screen and (max-width: $medium) {  
+  @media screen and (max-width: $medium) {
     padding-top: 250px;
     height: 590px;
   }
-  @media screen and (max-width: $large) {   
+  @media screen and (max-width: $large) {
     padding-top: 300px;
     height: 875px;
   }
-  @media only screen 
-  and (device-width: 390px) 
-  and (device-height: 844px) 
-  and (-webkit-device-pixel-ratio: 3) {
-    padding-top: 50px;
+  @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    padding-top: 0px;
     height: 718px;
   }
 
@@ -37,18 +34,18 @@ $large: 768px;
     margin: 0 20vw 50px 20vw;
     padding: 10px 10px 10px 10px;
     border: 2px solid white;
-    
-    @media screen and (max-width: $small) {  
+
+    @media screen and (max-width: $small) {
       width: 80vw;
       margin: 0 10vw 50px 10vw;
     }
-    @media screen and (max-width: $medium) {  
+    @media screen and (max-width: $medium) {
       width: 80vw;
       margin: 0 10vw 50px 10vw;
     }
-    @media screen and (max-width: $large) {  
-      width: 80vw;
-      margin: 0 10vw 50px 10vw;
+    @media screen and (max-width: $large) {
+      width: 95vw;
+      margin: 0 0vw 50px 2.5vw;
     }
 
     .bio-header {
@@ -59,23 +56,20 @@ $large: 768px;
       background: white;
       text-align: center;
 
-      @media screen and (max-width: $small) {  
+      @media screen and (max-width: $small) {
         margin: auto;
         text-align: center;
       }
-      @media screen and (max-width: $medium) {  
+      @media screen and (max-width: $medium) {
         margin: auto;
         text-align: center;
       }
-      @media screen and (max-width: $large) {  
+      @media screen and (max-width: $large) {
         font-size: 50px;
         margin: auto;
         text-align: center;
       }
-      @media only screen 
-      and (device-width: 390px) 
-      and (device-height: 844px) 
-      and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
         margin-bottom: 25px;
         font-size: 35px;
       }
@@ -83,41 +77,45 @@ $large: 768px;
     .about-text {
       font-family: "Ubuntu", sans-serif;
       background: white;
-      
-      @media screen and (max-width: $large) {  
+
+      @media screen and (max-width: $large) {
         font-size: 25px;
       }
-      @media only screen 
-      and (device-width: 390px) 
-      and (device-height: 844px) 
-      and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
         font-size: 20px;
         padding: 15px;
+        margin-bottom: 0px;
       }
     }
   }
   .tech-stack {
-    height: 40vh;
+    height: 270px;
     width: 60vw;
     font-family: "Ubuntu", sans-serif;
-    margin-top: 100px;
-    padding: 10px 10px 10px 10px;
+    margin-top: 50px;
+    padding: 10px 10px 15px 10px;
     border: 2px solid white;
 
-    @media screen and (max-width: $small) {  
+    @media screen and (max-width: $small) {
       height: 300px;
       width: 80vw;
       margin: 0 10vw 0 10vw;
     }
-    @media screen and (max-width: $medium) {  
+    @media screen and (max-width: $medium) {
       height: 300px;
       width: 80vw;
       margin: 0 10vw 0 10vw;
     }
-    @media screen and (max-width: $large) {  
+    @media screen and (max-width: $large) {
       height: 320px;
-      width: 80vw;
-      margin: 0 10vw 0 10vw;
+      width: 95vw;
+      margin: 0 0vw 0 2.5vw;
+    }
+    @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+      height: 36vh;
+      width: 95vw;
+      margin: 0 0vw 0 2.5vw;
+      padding: 10px 10px 10px 10px;
     }
 
     .tech-stack-header {
@@ -128,15 +126,12 @@ $large: 768px;
       text-align: center;
       background-color: white;
 
-      @media screen and (max-width: $large) {  
+      @media screen and (max-width: $large) {
         font-size: 50px;
         margin: auto;
         text-align: center;
       }
-      @media only screen 
-      and (device-width: 390px) 
-      and (device-height: 844px) 
-      and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
         font-size: 35px;
         margin-bottom: 25px;
       }
@@ -145,22 +140,17 @@ $large: 768px;
     .tech-section {
       background-color: white;
       padding: 15px;
+     
     }
 
-    .about-text{
-      @media screen and (max-width: $large) {  
+    .about-text {
+      @media screen and (max-width: $large) {
         font-size: 25px;
-       
       }
-      @media only screen 
-      and (device-width: 390px) 
-      and (device-height: 844px) 
-      and (-webkit-device-pixel-ratio: 3) {
+      @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
         font-size: 15px;
-
+        
       }
     }
-
   }
- 
 }

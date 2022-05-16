@@ -2,27 +2,22 @@ $small: 375px;
 $medium: 414px;
 $large: 768px;
 
-// .instagram-post-section {
-// width: 100vw;
-// height: 50vh;
-// margin-left: 4%;
-
-//   .instagram-image-box {
-
-    
-//   .instagram-image {
-//     width: 100px;
-//     height: 100px;
-//     object-fit: fill;
-//   }
-//   }
-// }
 .instagram-section{
-  width: 90vw;
+  width: 95vw;
   padding: 10px 10px 10px 10px;
   border: 2px solid white;
-  margin-left: 5vw;
+  margin-left: 2.5vw;
   margin-right: 0vw;
+  position: absolute;
+  z-index: 3;
+        //for parallax
+        margin-top: 1300px;
+
+        @media screen and (min-width: $large) {
+          margin-top: 2000px;
+          margin-left: 2.5vw;
+          text-align: center;
+        }
 
   .header {
     font-family: "Righteous", cursive;
@@ -51,7 +46,6 @@ $large: 768px;
     @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
       text-align: center;
       width: 90%;
-      margin-bottom: 25px;
       margin-left: 5%;
       font-size: 35px;
     }
@@ -59,4 +53,5 @@ $large: 768px;
 }
 .MuiImageList-root{
   height:335px;
+  margin-bottom: 0px;
 }

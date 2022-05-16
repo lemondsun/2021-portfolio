@@ -4,17 +4,22 @@ $large: 768px;
 
 .project-section {
   height: 35vh;
-  width: 90vw;
+  width: 60vw;
   font-family: "Ubuntu", sans-serif;
   padding: 10px 10px 10px 10px;
   border: 2px solid white;
   overflow: hidden;
+  position: absolute;
+  z-index: 3;
+  margin-top: 1000px;
+  margin-left: 20vw;
+ 
 
     @media only screen 
   and (min-width: 800px) 
   {
     height: 95vh;
-    margin-left: 5vw;
+    
   }
 
   @media screen and (max-width: $small) {
@@ -31,7 +36,8 @@ $large: 768px;
     width: 95vw;
     // margin-left: 2.5vw;
     // margin-top: 150px;
-    margin: 6vh 2.5vw 10vh 2.5vw;
+    // margin: 6vh 2.5vw 10vh 2.5vw;
+    margin: 90vh 2.5vw 10vh 2.5vw;
   }
 
   .header {
@@ -75,8 +81,8 @@ $large: 768px;
     grid-column-gap: 0px;
     grid-row-gap: 8px;
     overflow: scroll;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    
 
     @media only screen 
     and (min-width: 800px) 
