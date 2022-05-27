@@ -37,7 +37,6 @@ html {
 }
 
 .App {
-  height: 450vh;
   margin: 0;
   width: 100vw;
   position: relative;
@@ -47,7 +46,7 @@ html {
   @media only screen 
   and (min-width: 800px) 
   {
-   height: 270vh;
+   height: 290vh;
   }
 
   
@@ -71,7 +70,7 @@ html {
 and (device-width: 390px) 
 and (device-height: 844px) 
 and (-webkit-device-pixel-ratio: 3) {
-  height: 280vh;
+  height: 300vh;
   background-color: rgb(39, 38, 38);
 
 }
