@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setoffsetY } from './redux/screenSlice';
 import { useSelector } from 'react-redux';
@@ -8,7 +8,6 @@ import Hero from './components/hero/Hero';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Footer from './components/footer/Footer';
-import IgPosts from './components/instagram-post/IgPosts';
 import QuestionBox from './components/question-square/QuestionBox';
 import TriviaSwitch from './components/trivia-switch/TriviaSwitch';
 

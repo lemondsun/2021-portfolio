@@ -1,11 +1,7 @@
 import React from 'react';
 import './footer.styles.scss';
 
-import { useSelector } from 'react-redux';
-
-
 export default function Footer() {
-  const screenPlacement = useSelector((state) => state.offsetY.offsetY)
 
   return (
     <div

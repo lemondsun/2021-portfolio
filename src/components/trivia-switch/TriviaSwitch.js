@@ -19,12 +19,7 @@ export default function TriviaSwitch() {
 
   return (
     <div className='trivia-switch-tab'>
-      <Fab
-        onClick={switchApp}
-        variant="extended">
-        <ExtensionIcon sx={{ mr: 1 }} />
-       {buttonComment()}
-  </Fab>
+
     </div>
   )
 }
